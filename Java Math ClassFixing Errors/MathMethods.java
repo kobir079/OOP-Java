@@ -13,7 +13,7 @@ public class MathMethods {
         double triangleHeight = base * Math.tan(Math.toRadians(angleDeg));
         System.out.println("Height: " + triangleHeight);
 
-        // 2Compound Interest
+        // Equation 2 : Compound Interest
         System.out.println("\nEquation 2: Compound Interest Calculation.");
         System.out.print("Enter Principal (P): ");
         double principal = input.nextDouble();
@@ -27,7 +27,7 @@ public class MathMethods {
         double totalAmount = principal * Math.pow(1 + rate / compounds, compounds * years);
         System.out.println("Total Amount: " + totalAmount);
 
-        // 3️Cartesian to Polar
+        // Equation 3️ : Cartesian to Polar
         System.out.println("\nEquation 3: Convert Cartesian to Polar Coordinates.");
         System.out.print("Enter x: ");
         double xVal = input.nextDouble();
@@ -37,7 +37,7 @@ public class MathMethods {
         double thetaDeg = Math.toDegrees(Math.atan2(yVal, xVal));
         System.out.println("Radius: " + radius + ", Angle: " + thetaDeg + "°");
 
-        // 4️Distance Between Two Points
+        // Equation 4️ : Distance Between Two Points
         System.out.println("\nEquation 4: Calculate Distance Between Two Points.");
         System.out.print("Enter x1: ");
         double x1 = input.nextDouble();
@@ -51,7 +51,7 @@ public class MathMethods {
         double dist = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
         System.out.println("Distance: " + dist);
 
-        // 5️Quadratic Equation Solver
+        // Equation 5 : Quadratic Equation Solver 
         System.out.println("\nEquation 5: Solve Quadratic Equation.");
         System.out.print("Enter coefficient a: ");
         double coeffA = input.nextDouble();
@@ -60,11 +60,11 @@ public class MathMethods {
         System.out.print("Enter coefficient c: ");
         double coeffC = input.nextDouble();
 
-        double disc = Math.pow(coeffB, 2) - 4 * coeffA * coeffC;
+        double determinant = Math.pow(coeffB, 2) - 4 * coeffA * coeffC;
 
-        if (disc >= 0) {
-            double rootOne = (-coeffB + Math.sqrt(disc)) / (2 * coeffA);
-            double rootTwo = (-coeffB - Math.sqrt(disc)) / (2 * coeffA);
+        if (determinant >= 0) {
+            double rootOne = (-coeffB + Math.sqrt(determinant)) / (2 * coeffA);
+            double rootTwo = (-coeffB - Math.sqrt(determinant)) / (2 * coeffA);
             System.out.println("Roots: " + rootOne + ", " + rootTwo);
 
             if (rootOne >= 0 && rootTwo >= 0) {
