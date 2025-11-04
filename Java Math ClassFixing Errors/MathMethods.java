@@ -4,7 +4,7 @@ public class MathMethods {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        // 1️Right Triangle Height
+        // Equation 1: Right Triangle Height 
         System.out.println("Equation 1: Calculate the height of a right triangle.");
         System.out.print("Enter base (b): ");
         double base = input.nextDouble();
