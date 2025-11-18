@@ -11,13 +11,13 @@ public class RandomNumberGenerator {
     
     public static int generateRandom() {
         nextSeed();
-        return (int) Math.abs(seed);
+        return (int) Math.abs(seed);78y
     }
     
     public static int generateRandom(int max) {
         nextSeed();
         return (int) (Math.abs(seed) % max);
-    }
+    } 
     
     public static int generateRandom(int min, int max) {
         return min + generateRandom(max - min);
