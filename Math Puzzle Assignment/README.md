@@ -6,7 +6,6 @@ public class MathPuzzle {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // Player info
         System.out.print("Enter your name: ");
         String playerName = sc.nextLine();
 
@@ -15,7 +14,6 @@ public class MathPuzzle {
 
         int score = 0;
 
-        // Read questions from file
         try (Scanner fileScanner = new Scanner(new File("questions.txt"))) {
             while (fileScanner.hasNextLine()) {
                 String[] parts = fileScanner.nextLine().split(",");
@@ -36,10 +34,8 @@ public class MathPuzzle {
             System.out.println("Questions file not found.");
         }
 
-        // Show score
         System.out.println(playerName + ", your final score is: " + score);
 
-        // Save score
         try (PrintWriter out = new PrintWriter(new FileWriter("scores.txt", true))) {
             out.println(playerName + " - " + difficulty + " - Score: " + score);
             System.out.println("Score saved to scores.txt");
